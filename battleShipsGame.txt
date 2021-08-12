@@ -1,0 +1,63 @@
+~~ This file contains various testcases for the Battle Ship game ~~
+
+Test Case 1: Testing the players attack 
+NOTE: For the testing of the program the number of attacks was reduced from 15 to 5
+NOTE: playerAttack represents the attacks of the player on  enemy plane and compPlane represnts the position of computer's ships 
+NOTE: For the testing purposes the computer's ships were reveled before the game was over so the player was able to see where the computers ships are placed
+NOTE: The vales in playerAttack and compPlane are the possitions of the attack and the ships, so for example [1 6; 7 8] indicates attack1 = (1st row 6th column) and attack2 = (7th row and 8th column)
+
+playerAttack                    compPlane                       Expected Points         Output
+[1 7; 2 4; 1 5; 5 6; 6 1]       [1 8; 7 8; 9 9; 1 1; 8 8]       0                       0
+[1 1; 3 6; 7 2; 8 1; 3 4]       [1 3; 3 6; 4 1; 9 4; 1 9]       1                       1
+[3 1; 9 7; 4 2; 2 8; 1 5]       [7 3; 3 5; 4 2; 3 6; 1 5]       2                       2
+[6 6; 8 2; 7 5; 1 4; 4 9]       [6 6; 1 8; 3 3; 1 4; 4 9]       3                       3
+[9 9; 2 5; 1 6; 7 3; 1 8]       [9 1; 2 5; 1 6; 7 3; 1 8]       4                       4
+[2 4; 3 9; 5 7; 6 1; 2 8]       [2 4; 3 9; 5 7; 6 1; 2 8]       5                       5
+[4 5; 8 2; 1 3; 1 3; 3 9]       [4 5; 1 7; 1 3; 4 7; 2 5]       2                       2
+[1 2; 4 5; 6 2; 7 1; 9 0]       [1 2; 4 5; 6 2; 7 1; 9 4]       The input is invalid    The input is invalid
+                                                                Please input again      Please input again
+[1 7; 6 9; 4 7; 2 1; 10 11]     [4 5; 6 9; 4 7; 2 1; 1 4]       The input is invalid    The input is invalid
+                                                                Please input again      Please input again
+[2 4; 5 1; 6 1; 6 2; 1 -1]      [1 3; 5 2; 6 2; 4 2; 9 7]       The input is invalid    The input is invalid
+                                                                Please input again      Please input again
+[4 1; 1 2; 1 3; 1 4; 4 x]       [2 9; 9 3; 3 5; 7 1; 3 2]       error                   error
+[1 1 ; 1 2;   ; 1 4; 1 5]       [4 4; 6 3; 8 2; 3 9; 2 2]       error                   error 
+[5 9; 4 9; 7  ; 6 1; 2 6]       [1 7; 2 9; 1 3; 3 5; 1 5]       error                   error 
+
+
+
+Test Case 2: Testing the players ship placements 
+NOTE: playerPlane represnts the position of the players ships 
+NOTE: The expected output and the output represent if the program will allow such values for playerPlane
+
+playerPlane                     Expected Output          Output
+[1 1; 2 2; 3 3; 4 4; 5 5]       true                     true
+[1 1; 3 3; 4 4; 5 5; 0 0]       The input is invalid     The input is invalid
+                                Please input again       Please input again
+[-1 1; 3 3; 4 4; 5 5; 6 6]      The input is invalid     The input is invalid
+                                Please input again       Please input again
+[1 4; 6 2; 6 8; 9 1; 11 11]     The input is invalid     The input is invalid
+                                Please input again       Please input again
+[1 4; 6 2; 6 8; 9 1; 11 11]     The input is invalid     The input is invalid
+                                Please input again       Please input again
+[1 2; 4 9; 1 3; 4 6; 1 ]        error                    error
+[5 9; 3 1; 4 6; 5 1; 3 b]       error                    error
+
+
+
+
+Test Case 3: Testing the final winner 
+
+
+points     compPoints       Expected Output          Output
+1          3                COMPUTER WINSS!!!        COMPUTER WINS!!!
+4          2                PLAYER WINSS!!!          PLAYER WINS!!!
+0          0                ITS A TIE!!!             ITS A TILE!!!
+
+
+
+
+
+
+
+
